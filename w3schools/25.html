@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+  #status-box {
+    border: 2px solid black;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+  }
+
+ 
+  .info-text {
+    font-style: italic;
+    color: gray;
+  }
+</style>
+</head>
+<body>
+
+  <h1 id="top">ID and Class Demo</h1>
+  
+  <a href="#footer">Go to Footer</a>
+
+  <div id="status-box">
+    <p class="info-text">Current Status:</p>
+    <p id="message">Waiting for click...</p>
+  </div>
+
+  <button onclick="changeMessage()">Update Message</button>
+
+  <div style="margin-top: 1000px;">
+    <h2 id="footer">Footer Section</h2>
+    <a href="#top">Back to Top</a>
+  </div>
+
+  <script>
+    function changeMessage() {
+   
+      document.getElementById("message").innerHTML = "Updated via JavaScript!";
+      document.getElementById("message").style.color = "green";
+    }
+  </script>
+
+</body>
+</html>
