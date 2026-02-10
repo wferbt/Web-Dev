@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6f8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  width: 600px;
+  text-align: center;
+}
+
+.topbar {
+  height: 36px;
+  background: #2f2f2f;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls input {
+  width: 320px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.todo-card {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #eee;
+}
+
+.todo-item:first-child {
+  border-top: none;
+}
+
+.todo-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.delete-btn {
+  color: red;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
