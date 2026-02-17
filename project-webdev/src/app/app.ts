@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { UserProfileComponent } from './user-profile/user-profile.component'; // Проверьте путь!
+import { UserCardComponent } from './user-card/user-card'; // Fix this path!
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserProfileComponent], // UserProfileComponent должен быть тут
+  imports: [UserCardComponent], // Import the card here
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class AppComponent {
-  title = 'project-webdev';
+  handleEvent(msg: string) {
+    console.log('Received from child:', msg);
+  }
 }

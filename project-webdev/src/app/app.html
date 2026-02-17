@@ -8,8 +8,11 @@
 <body>
   <h1>Моё Angular приложение</h1>
 
-<app-user-profile></app-user-profile>
+<app-user-card 
+  [name]="'Vilen'" 
+  (info)="handleEvent($event)">
+</app-user-card>
 
-<router-outlet />
+
 </body>
 </html>

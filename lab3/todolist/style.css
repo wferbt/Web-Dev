@@ -1,75 +1,115 @@
-body {
+/* Base Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f6f8;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.app {
-  width: 600px;
-  text-align: center;
+body {
+  background-color: #fcfcfc;
+  height: 930px;
+  color: #333;
 }
 
-.topbar {
-  height: 36px;
-  background: #2f2f2f;
+/* Header Styles */
+.top-nav {
+  background-color: #222;
+  color: #ddd;
+  padding: 15px 20px;
+}
+
+.nav-content {
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+/* Main Container */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: normal;
   margin-bottom: 20px;
 }
 
-.title {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.controls {
+/* Input Section */
+.input-group {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-.controls input {
-  width: 320px;
-  padding: 6px 10px;
+#taskInput {
+  flex-grow: 1;
+  padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.controls button {
-  background: #3b82f6;
+#addBtn {
+  background-color: #337ab7;
   color: white;
   border: none;
-  padding: 6px 14px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#addBtn:hover {
+  background-color: #286090;
+}
+
+/* Task List Styles */
+#taskList {
+  list-style: none;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#taskList li:last-child {
+  border-bottom: none;
+}
+
+/* Elements inside the list item */
+#taskList li input[type="checkbox"] {
+  margin-right: 15px;
   cursor: pointer;
 }
 
-.todo-card {
-  background: white;
-  border: 1px solid #ddd;
+#taskList li span {
+  flex-grow: 1;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-.todo-item {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  border-top: 1px solid #eee;
-}
-
-.todo-item:first-child {
-  border-top: none;
-}
-
-.todo-text {
-  flex: 1;
-  margin-left: 10px;
+/* Strikethrough style for completed tasks */
+#taskList li.completed span {
+  text-decoration: line-through;
+  color: #999;
 }
 
 .delete-btn {
-  color: red;
-  cursor: pointer;
-  border: none;
   background: none;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  color: #c9302c;
 }
