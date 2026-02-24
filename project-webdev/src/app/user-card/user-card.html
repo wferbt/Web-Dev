@@ -7,10 +7,10 @@
 </head>
 <body>
     <div class="user-card" style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; margin: 10px;">
-  <h3>Name: {{ name }}</h3>
-  <p>Position: {{ jobTitle }}</p>
-  
-  <button (click)="onDeleteClick()">Delete User</button>
+  <h3>Name: {{ name() }}</h3>
+<p>Position: {{ jobTitle }}</p>
+
+<button (click)="onDeleteClick()">Delete User</button>
 </div>
 </body>
 </html>

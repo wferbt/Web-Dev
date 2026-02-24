@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Page</title>
+    <link rel="stylesheet" href="./2.css">
+</head>
+ <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+
+    min-height: 100vh;
+    display: block;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    min-height: 85vh;
+
+}
+
+
+
+.top-logo {
+    width: 60px;
+    margin-bottom: 20px;
+    margin-right: 1122px;
+    margin-top: 60px;
+}
+
+
+.left-section {
+    background-color: #0a0d10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-direction: column;
+    width: 1432.82px;
+    height: 800px;
+}
+
+.left-content-wrapper {
+    max-width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insta-logo-gradient {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 24px;
+}
+
+.left-headline {
+
+    font-weight: 390;
+    line-height: 64.8px;
+    font-family: Instagram Sans Regular !important;
+    color: #f1f4f7;
+    font-size: 2.4vw;
+    text-align: center;
+    width: 782px;
+}
+
+
+.collage-img {
+    width: 1304px;
+
+    height: 540px;
+    object-fit: contain;
+
+}
+
+.right-section {
+    border-left: 2px solid #2d3b45;
+    background-color: #152127;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    width: 650px;
+    height: 800px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.login-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #e0e0e0;
+}
+
+
+.input-field {
+    width: 100%;
+    background-color: #1c1e21;
+
+    border: 1px solid #363636;
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+}
+
+.input-field:focus {
+    border-color: #8e8e8e;
+
+}
+
+.input-field::placeholder {
+    color: #a8a8a8;
+
+}
+
+
+.login-primary {
+    width: 100%;
+    background-color: #0064e0;
+
+    color: white;
+    border: none;
+    border-radius: 25px;
+
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-primary:hover {
+    background-color: #0056c2;
+}
+
+.forgot-link {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    display: block;
+}
+
+
+.btn-outline {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #363636;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.fb-icon {
+    fill: white;
+}
+
+.create-acc-btn {
+    color: #0095f6;
+
+}
+
+.meta-footer {
+
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    gap: 5px;
+}
+
+.meta-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+@media (max-width: 850px) {
+    .left-section {
+        display: none;
+    }
+
+    .right-section {
+        border-left: none;
+        background-color: #000;
+    }
+}
+
+.main-footer {
+    width: 100%;
+    border-top: 2px solid #2d3b45;
+    padding: 20px 20px;
+    color: #a8a8a8;
+    background-color: #0a0d10;
+    height: 134px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #a8a8a8;
+    font-size: 12px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-bottom {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+    margin-bottom: 20px;
+}
+
+.language-select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+</style> 
+
+<body>
+
+    <div class="main-container">
+
+        <div class="left-section"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram Icon" class="top-logo">
+            <div class="left-content-wrapper">
+
+
+                <h1 class="left-headline">See everyday moments from your close friends.</h1>
+
+                <img src="https://static.cdninstagram.com/rsrc.php/v4/yD/r/nWfBjz-5_uf.png" alt="App Collage" class="collage-img">
+            </div>
+        </div>
+
+
+        <div class="right-section">
+            <div class="login-container">
+                <h2 class="login-header">Log into Instagram</h2>
+
+                <form action="/" method="POST">
+                    <input class="input-field" name="username" type="text"
+                        placeholder="Phone number, username or email">
+
+                    <input class="input-field" name="password" type="password" placeholder="Password">
+
+                    <button class="login-primary" type="submit">
+                        Log In
+                    </button>
+                </form>
+
+                <a href="#" class="forgot-link">Forgot password?</a>
+
+                <button class="btn-outline">
+                    <svg class="fb-icon" width="20" height="20" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.16L15.72 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z" />
+                    </svg>
+                    Log in with Facebook
+                </button>
+
+                <button class="btn-outline create-acc-btn">Create new account</button>
+
+            </div>
+            <div class="meta-footer">
+                <svg viewBox="0 0 320 180" height="12" fill="#fff">
+                    <path
+                        d="M211.3 75.6c-13.9 0-25.2 6.3-36.5 17.5-12.7 12.7-22 18.2-34.9 18.2-12.2 0-20.9-8.4-20.9-20.4 0-14.8 11.6-28.7 27.2-28.7 12.3 0 20.3 5.4 28.5 13.5l10.9-12.3C174.5 52.8 163.6 46 146.9 46c-27.1 0-48 22.8-48 50.1 0 21.3 14.9 37.9 36.6 37.9 14.2 0 25.4-6.3 37-18 11.9-11.9 21.4-17.7 34.3-17.7 12.2 0 20.2 8.5 20.2 20.4 0 14.8-11.8 29.2-27.7 29.2-13.6 0-22.1-6.1-30.8-15.3l-11.4 11.7c10.4 11.7 23.1 19.7 41.7 19.7 27.5 0 49-23 49-50.6.2-21.7-15.4-37.8-36.5-37.8zM80.1 75.6c-13.9 0-25.2 6.3-36.5 17.5-12.7 12.7-22 18.2-34.9 18.2C-3.5 111.3-12.2 102.9-12.2 90.9c0-14.8 11.6-28.7 27.2-28.7 12.3 0 20.3 5.4 28.5 13.5l10.9-12.3C43.3 52.8 32.4 46 15.7 46c-27.1 0-48 22.8-48 50.1 0 21.3 14.9 37.9 36.6 37.9 14.2 0 25.4-6.3 37-18 11.9-11.9 21.4-17.7 34.3-17.7 12.2 0 20.2 8.5 20.2 20.4 0 14.8-11.8 29.2-27.7 29.2-13.6 0-22.1-6.1-30.8-15.3l-11.4 11.7c10.4 11.7 23.1 19.7 41.7 19.7 27.5 0 49-23 49-50.6.2-21.7-15.4-37.8-36.5-37.8z"
+                        transform="translate(50, 0)" />
+                </svg>
+                <span class="meta-label">Meta</span>
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <nav class="footer-links">
+                <a href="#">Meta</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Jobs</a>
+                <a href="#">Help</a>
+                <a href="#">API</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Locations</a>
+                <a href="#">Instagram Lite</a>
+                <a href="#">Threads</a>
+                <a href="#">Contact Uploading & Non-Users</a>
+                <a href="#">Meta Verified</a>
+            </nav>
+
+            <div class="footer-bottom">
+                <div class="language-select">
+                    <span>English</span>
+                    <svg aria-label="Down chevron icon" color="rgb(168, 168, 168)" fill="rgb(168, 168, 168)" height="12"
+                        role="img" viewBox="0 0 24 24" width="12">
+                        <path
+                            d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"
+                            transform="rotate(180 12 12)"></path>
+                    </svg>
+                </div>
+                <div class="copyright">
+                    © 2026 Instagram from Meta
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { UserCardComponent } from './user-card/user-card'; // Fix this path!
+import { RouterOutlet } from '@angular/router';
+import { UserCardComponent } from './user-card/user-card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [UserCardComponent], // Import the card here
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.css'],
 })
 export class AppComponent {
-  handleEvent(msg: string) {
-    console.log('Received from child:', msg);
+  handleEvent(message: string) {
+    console.log('INFO:', message);
   }
 }

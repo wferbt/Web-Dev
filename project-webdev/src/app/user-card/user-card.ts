@@ -1,20 +1,22 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-user-card',
-  standalone: true, // Newer Angular projects (like yours) use standalone by default
+  standalone: true,
   templateUrl: './user-card.html',
-  styleUrls: ['./user-card.css']
+  styleUrls: ['./user-card.css'],
 })
-export class UserCardComponent implements OnInit {
-  @Input() name: string = 'User';
-  @Output() info = new EventEmitter<string>();
+export class UserCardComponent {
+  // ✅ signal-based input (Angular 17+)
+  name = input<string>('Guest');
 
-  ngOnInit() {
-    console.log('Card loaded');
-  }
+  // ✅ signal-based output (Angular 17+)
+  info = output<string>();
 
-  handleClick() {
-    this.info.emit('Clicked!');
+  jobTitle = 'Frontend Developer';
+
+  onDeleteClick() {
+    // можешь эмитить что угодно
+    this.info.emit(`Deleted user: ${this.name()}`);
   }
 }

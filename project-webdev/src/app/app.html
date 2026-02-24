@@ -5,14 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  <h1>Моё Angular приложение</h1>
+  <header class="header">
+  <div class="bar">
+    <div class="logo">kaspi<span class="dot">.</span>style</div>
 
-<app-user-card 
-  [name]="'Vilen'" 
-  (info)="handleEvent($event)">
-</app-user-card>
+    <div class="search">
+      <input placeholder="Поиск товаров..." />
+      <button>Поиск</button>
+    </div>
 
+    <nav class="actions">
+      <a routerLink="/about">О проекте</a>
+      <a href="https://kaspi.kz/shop/" target="_blank" rel="noopener">Kaspi</a>
+    </nav>
+  </div>
+
+  <div class="cats">
+    <a href="#">Смартфоны</a>
+    <a href="#">Наушники</a>
+    <a href="#">PowerBank</a>
+    <a href="#">Проекторы</a>
+    <a href="#">Аксессуары</a>
+  </div>
+</header>
+
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
 
 </body>
 </html>

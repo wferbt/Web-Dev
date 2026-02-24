@@ -1,0 +1,35 @@
+<a class="imgWrap" [href]="product().link" target="_blank" rel="noopener">
+  <img class="img" [src]="activeImage()" [alt]="product().name">
+</a>
+
+<div class="thumbs">
+  @for (img of product().images; track $index) {
+    <button
+      class="thumb"
+      type="button"
+      [class.active]="$index === activeIndex()"
+      (click)="setImage($index)"
+      aria-label="thumb"
+    >
+      <img [src]="img" [alt]="product().name">
+    </button>
+  }
+  
+</div>
+<div class="body">
+
+  <h3 class="name">{{ product().name }}</h3>
+
+  <p class="desc">{{ product().description }}</p>
+
+  <div class="price">
+    {{ product().price | number }} ₸
+  </div>
+
+  <div class="rating">
+    ⭐ {{ product().rating }}
+  </div>
+
+  <button class="btn" (click)="onShare()">Share</button>
+
+</div>

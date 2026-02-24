@@ -1,0 +1,12 @@
+<section class="wrap">
+  <div class="top">
+    <h2 class="title">Каталог</h2>
+    
+  </div>
+
+  <div class="grid">
+    @for (p of products; track p.id) {
+  <app-product-card [product]="p"></app-product-card>
+}
+  </div>
+</section>
