@@ -1,0 +1,25 @@
+<section class="header">
+  <h2>Albums</h2>
+  <p class="muted">Click an album to view details. You can delete albums from the list.</p>
+</section>
+
+<div *ngIf="loading" class="box">Loading albums… ⏳</div>
+
+<div *ngIf="!loading && errorMsg" class="box error">{{ errorMsg }}</div>
+
+<div *ngIf="!loading && !errorMsg && albums.length === 0" class="box">
+  No albums found.
+</div>
+
+<ul *ngIf="!loading && !errorMsg && albums.length > 0" class="list">
+  <li class="item" *ngFor="let album of albums" (click)="openAlbum(album.id)">
+    <div class="meta">
+      <div class="id">#{{ album.id }}</div>
+      <div class="title">{{ album.title }}</div>
+    </div>
+
+    <button class="danger" (click)="deleteAlbum(album.id, $event)" [disabled]="deletingId === album.id">
+      {{ deletingId === album.id ? 'Deleting…' : 'Delete' }}
+    </button>
+  </li>
+</ul>

@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 18px;
+  background: #fff;
+}
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.btn:hover { opacity: 0.92; }

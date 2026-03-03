@@ -1,0 +1,18 @@
+<section class="header">
+  <h2>Photos — Album #{{ albumId }}</h2>
+  <button class="btn ghost" (click)="goBack()">← Back</button>
+</section>
+
+<div *ngIf="loading" class="box">Loading photos… ⏳</div>
+<div *ngIf="!loading && errorMsg" class="box error">{{ errorMsg }}</div>
+
+<div *ngIf="!loading && !errorMsg && photos.length === 0" class="box">
+  No photos found.
+</div>
+
+<div *ngIf="!loading && !errorMsg && photos.length > 0" class="grid">
+  <figure class="photo" *ngFor="let p of photos">
+    <img [src]="p.thumbnailUrl" [alt]="p.title" loading="lazy" />
+    <figcaption class="caption" title="{{ p.title }}">{{ p.title }}</figcaption>
+  </figure>
+</div>
